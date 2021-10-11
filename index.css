@@ -1,0 +1,60 @@
+body{
+    margin: 0;
+    background: coral;
+    font: 1em sans-serif;
+}
+
+.container{
+    width: 50vw;
+    height: 80vh;
+    padding-top: 1%;
+    margin-top: 10vh;
+    margin-left: 25vw;
+    background-color: white;   
+}
+
+.center-align{
+    text-align: center;
+}
+
+#contactDiv{
+    border: 0.5px solid silver;
+    border-bottom: none;
+    margin-left: 10%;
+    /*height: 30%;*/
+    margin-right: 25%
+}
+
+#filterInput{
+    border: none;
+    border-bottom: 1px solid silver;
+    margin-left: 10%;
+    margin-bottom: 3%;
+    width: 65%;
+    outline: none;
+}
+
+#names{
+    list-style: none;
+    padding-left: 0;
+}
+
+ul{
+    margin: 0;
+}
+
+li{
+    border-bottom: 0.5px solid silver;
+    padding: 7px;
+    padding-left: 5%;
+    color: #00ace6;
+    font-size: 12px;
+}
+
+.heading{
+    padding-left: 3%;
+    font-weight: bold;
+    color: black;
+    font-size: 15px;
+    padding: 12px
+}

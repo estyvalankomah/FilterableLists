@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>My Contacts</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="center-align">
+            My Contacts
+        </h1>
+        <input type="text" id="filterInput" placeholder="Search contact">
+        <div id="contactDiv">
+            <ul id="names">
+                <li class="heading">A</li>
+                <li class="list-item">Abena</li>
+                <li class="list-item">Akua</li>
+                <li class="list-item">Ama</li>
+                <li class="heading">B</li>
+                <li class="list-item">Bassey</li>
+                <li class="list-item">Ben</li>
+                <li class="list-item">Brad</li>
+                <li class="heading">C</li>
+                <li class="list-item">Cath</li>
+                <li class="list-item">Crystal</li>
+            </ul>
+        </div>
+        
+    </div>
+
+    <script>
+        let filterInput = document.getElementById('filterInput');
+        filterInput.addEventListener('focus', changeColor);
+        filterInput.addEventListener('keyup', filterNames);
+
+        function changeColor(){
+            document.getElementById('filterInput').style.borderBottom = '1px solid #248f8f';
+        }
+
+        function filterNames(){
+            let filterValue = document.getElementById('filterInput').value.toUpperCase();
+            let ul = document.getElementById('names');
+            let li = ul.querySelectorAll('li.list-item');
+
+            for(let i = 0; i < li.length; i++){
+                let text = li[i].innerHTML;
+                if(text.toUpperCase().indexOf(filterValue) > -1){
+                    li[i].style.display = '';
+                } else {
+                    li[i].style.display = 'none';
+                }
+            }
+        }
+    </script>
+</body>
+    </html>
